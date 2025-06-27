@@ -10,11 +10,10 @@ import java.nio.file.*;
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
-import static java.util.stream.Collectors.groupingBy;
-import static java.util.stream.Collectors.maxBy;
-import static java.util.stream.Collectors.partitioningBy;
 
 public class HomeworkM11Streams {
+    
+    private static final String FILE_PATH = "C:\\Users\\User\\NetBeansProjects\\BigDatapart1\\src\\CustomerData\\Customers.csv";
 
     public static List<Customer> customerList = null;
 
@@ -317,7 +316,7 @@ public class HomeworkM11Streams {
 
     public static void fillList(List<Customer> list) {
         try (Scanner fileScan = new Scanner(
-                new FileReader(new File("C:\\Users\\User\\NetBeansProjects\\BigDatapart1\\src\\CustomerData\\Customers.csv")))) {
+                new FileReader(new File(FILE_PATH)))) {
 
             while (fileScan.hasNext()) {
                 String line = fileScan.nextLine();
